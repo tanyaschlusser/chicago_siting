@@ -1,0 +1,68 @@
+Purpose
+=======
+
+A prospective business owner in the Chicago Metro Area has
+many locations to choose for locating a new storefront.
+Contributing considerations include
+
+- Zoning
+- Tax or other incentives
+- Type of existing businesses
+- Likelihood for success
+    + Historical success of similar businesses
+    + Local socioeconomic environment
+    + Nearby transportation
+
+
+Data
+====
+
+Main resources
+--------------
+
+- Census: [Chicago socioeconomic census data](https://data.cityofchicago.org/Health-Human-Services/Census-Data-Selected-socioeconomic-indicators-in-C/kn9c-c2s2)
+- Zoning
+    + Boundaries: [Chicago zoning boundaries](https://data.cityofchicago.org/Community-Economic-Development/Boundaries-Zoning-Districts/ys52-bf79)
+    + Businesses: [Chicago zoning business table](http://www.cityofchicago.org/content/dam/city/depts/bacp/pictures/businessusetable110410.pdf)
+    + Ordinance: [Chicago zoning ordinance](http://www.amlegal.com/nxt/gateway.dll/Illinois/chicagozoning/chicagozoningordinanceandlanduseordinanc?f=templates$fn=default.htm$3.0$vid=amlegal:chicagozoning_il)
+- Business licenses: [Current and historical business licenses](https://data.cityofchicago.org/Community-Economic-Development/Business-Licenses/r5kz-chrr)
+- NAICS: [NAICS Descriptions](http://www.census.gov/econ/cbp/download/NAICS2012.txt)
+- Trends: [Census County Business Patterns](https://www.census.gov/econ/cbp/download)
+
+
+Possible other resources
+------------------------
+
+- Broadband: [Broadband innovation zones](https://data.cityofchicago.org/Community-Economic-Development/Broadband-Innovation-Zones/jkfs-hwcr)
+- Community: [Community enterprise zones](https://data.cityofchicago.org/Community-Economic-Development/Boundaries-Enterprise-Zones/64xf-pyvh)
+- TIF: [Tax Increment Financing districts](https://data.cityofchicago.org/Community-Economic-Development/Boundaries-Tax-Increment-Financing-Districts/iyec-2es5)
+- Planning: [Planning Districts](https://data.cityofchicago.org/Community-Economic-Development/Boundaries-Planning-Districts/5xt8-wz7f)
+- Empowerment: [Empowerment Zones](https://data.cityofchicago.org/Community-Economic-Development/Boundaries-Empowerment-Zones/m6ef-sjkj)
+
+
+DesiredUI
+=========
+
+1. User selects a NAICS category from a dropdown and the permissible zones highlight
+2. User hovers over a highlighted zone and
+    a. 3 Nearest EL stops light
+    b. 3 Nearest Divvy stops light
+    c. Likelihood that the business will be open in a certain
+       number of years based on a regression on similar business's
+       longevity and the local socioeconomic environment
+           i. 1 year
+           ii. 2 years
+           iii. 5 years
+    d. A chart with the most relevant (highest P-value) socioeconomic
+       factors, year over year
+    e. A chart with the most relevant (similar NAICS) businesses
+       count year over year
+
+
+Roadmap
+=======
+
+1. Merge the datasets
+2. Render the zones on the webpage
+3. Connect the dataset to the webpage (REST to HDFS)
+4. 
